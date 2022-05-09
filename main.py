@@ -13,7 +13,9 @@ def fileExtractor():
         dest_dir = os.path.join(root_dir,dest_dir_name)
 
         #checking the needed file type
-        #glob.glob(f"{root_dir}\*.[FILE TYPE]")
+        #glob.glob(f"{root_dir}\*.[FILE TYPE]") for only root folder
+        #glob.glob(f"{root_dir}\**\*.[FILE TYPE]",recursive=True) for root and sub folders
+        
         file = glob.glob(f"{root_dir}\**\*.ipynb",recursive=True)
 
         #moving pdf files into destination folder
